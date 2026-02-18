@@ -32,7 +32,21 @@ class Referee:
 
         return False
 
-    def __check_win_by_column(self) -> bool: pass
+    def __check_win_by_column(self, marker) -> bool:
+        for i in range(self.__field.get_columns()):
+            column_is_winning = True
+
+            for j in range(self.__field.get_rows()):
+                current_cell_marker = self.__field.get_cell_marker(i, j)
+
+                if current_cell_marker != marker:
+                    column_is_winning = False
+                    break
+
+            if column_is_winning:
+                return True
+
+        return False
 
     def __check_win_by_diagonal(self) -> bool: pass
 
