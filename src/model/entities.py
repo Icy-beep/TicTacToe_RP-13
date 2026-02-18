@@ -64,7 +64,8 @@ class Field:
                 cell = Cell(i, j)
                 self.__cells[i].append(cell)
 
-
+    def get_rows(self) -> int:
+        return self.__rows
 
     def reset(self):
         for i in range(0, self.__rows, 1):
