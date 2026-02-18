@@ -70,6 +70,9 @@ class Field:
     def get_columns(self) -> int:
         return self.__columns
 
+    def get_cell_marker(self, x, y):
+        return self.__cells[x][y].get_marker()
+
     def reset(self):
         for i in range(0, self.__rows, 1):
             for j in range(0, self.__columns, 1):
