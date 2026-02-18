@@ -25,6 +25,9 @@ class Cell:
 
         self.__marker = marker
 
+    def get_marker(self) -> int:
+        return self.__marker
+
     def reset(self) -> None:
         self.__marker = MARKER_EMPTY
 
