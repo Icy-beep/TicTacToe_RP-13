@@ -16,7 +16,21 @@ class Referee:
     def check_draw(self) -> bool:
         pass
 
-    def __check_win_by_row(self) -> bool: pass
+    def __check_win_by_row(self, marker) -> bool:
+        for i in range(self.__field.get_rows()):
+            row_is_winning = True
+
+            for j in range(self.__field.get_columns()):
+                current_cell_marker = self.__field.get_cell_marker(i, j)
+
+                if current_cell_marker != marker:
+                    row_is_winning = False
+                    break
+
+            if row_is_winning:
+                return True
+
+        return False
 
     def __check_win_by_column(self) -> bool: pass
 
