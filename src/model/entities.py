@@ -67,6 +67,9 @@ class Field:
     def get_rows(self) -> int:
         return self.__rows
 
+    def get_columns(self) -> int:
+        return self.__columns
+
     def reset(self):
         for i in range(0, self.__rows, 1):
             for j in range(0, self.__columns, 1):
